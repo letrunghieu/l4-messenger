@@ -3,7 +3,7 @@ namespace Pichkrement\Messenger\Models;
 
 use Pichkrement\Messenger\Models\Conversation as Conversation;
 
-class User extends \Eloquent implements \Illuminate\Auth\UserInterface, \Illuminate\Auth\Reminders\RemindableInterface {
+class User extends \Eloquent {
 
 	protected $guarded = array('id', 'password');
 
