@@ -21,32 +21,6 @@ class CreateUsersTable extends Migration {
 				$table->string('email', 30)->unique();
 				$table->timestamps();
 			});
-		}else{
-			if(!Schema::hasColumn('users', 'username')){
-				Schema::table('users', function($table){
-					$table->string('username', 30)->unique();
-				});
-			}
-			if(!Schema::hasColumn('users', 'firstname')){
-				Schema::table('users', function($table){
-					$table->string('firstname', 30)->unique();
-				});
-			}
-			if(!Schema::hasColumn('users', 'surname')){
-				Schema::table('users', function($table){
-					$table->string('surname', 30)->unique();
-				});
-			}
-			if(!Schema::hasColumn('users', 'email')){
-				Schema::table('users', function($table){
-					$table->string('email', 30)->unique();
-				});
-			}
-			if(!Schema::hasColumn('password', 'email')){
-				Schema::table('users', function($table){
-					$table->string('password', 30)->unique();
-				});
-			}
 		}
 	}
 
